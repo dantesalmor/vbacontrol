@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kit VBA para el Control 2</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="barra">
+    <div class="marca">
+      <span class="logo" aria-hidden="true">fx</span>
+      <div>
+        <b>Kit VBA</b>
+        <small>Control 2, Excel en inglés</small>
+      </div>
+    </div>
+
+    <div class="formula" role="search">
+      <span class="nombre" id="cajaNombre" title="Problema abierto">A1</span>
+      <label class="fx" for="q">Buscar</label>
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Función, macro, frase o error: InStr, BuscarTicket, sin repetir, 1004…  ( / )">
+      <div class="resultados" id="resultados" hidden role="listbox"></div>
+    </div>
+
+    <button class="icono" id="tema" type="button" title="Cambiar tema claro u oscuro" aria-label="Cambiar tema">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+
+  <nav class="pestanas" aria-label="Secciones">
+    <button class="pes activa" type="button" data-vista="problemas">Mis 4 problemas</button>
+    <button class="pes" type="button" data-vista="enunciado">De enunciado a código</button>
+    <button class="pes" type="button" data-vista="funciones">Funciones</button>
+    <button class="pes" type="button" data-vista="errores">Errores y checklist</button>
+  </nav>
+</header>
+
+<div class="marco">
+  <aside class="nav" id="nav" aria-label="Problemas"></aside>
+  <main class="contenido" id="vista"></main>
+  <aside class="panel" id="panel" aria-label="Explicación">
+    <div class="panel-in" id="panelIn"></div>
+  </aside>
+</div>
+
+<div class="tip" id="tip" hidden></div>
+<div class="toast" id="toast" hidden role="status"></div>
+
+<script src="data/funciones.js"></script>
+<script src="data/problemas.js"></script>
+<script src="data/enunciado.js"></script>
+<script src="data/errores.js"></script>
+<script src="js/motor.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
